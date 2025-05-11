@@ -4,10 +4,12 @@ function custom_youtube_embed_frontend_shortcode() {
     if (!$url) {
         return '<p>No video URL set.</p>';
     }
-    return '
-    <iframe width="560" height="315" loading="lazy" src="' . esc_url($url) . '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
+
+    return 
+    '
+    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio" style="margin-top:0;margin-bottom:0"><div class="wp-block-embed__wrapper">
+    <iframe title="Youtube Video Player" style="width: 100%; height: 100%; aspect-ratio: 16 / 9; margin: 0 auto;" src="' . esc_url($url) . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+    </div></figure>
     ';
-    #return '<iframe width="560" height="315" src="' . esc_url($url) . '" frameborder="0" allowfullscreen></iframe>';
 }
-add_shortcode('youtube_embed', 'custom_youtube_embed_frontend_shortcode');
+add_shortcode('custom_youtube_embed', 'custom_youtube_embed_frontend_shortcode');

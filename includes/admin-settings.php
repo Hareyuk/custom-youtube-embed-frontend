@@ -15,7 +15,7 @@ function custom_youtube_embed_frontend_settings_page() {
     
     <div class="wrap">
         <h1>YouTube Embed Settings</h1>
-        <p>The shortcode for adding this video in Editor Block is 'custom_youtube_embed_frontend_shortcode'. Be sure to copy correctly the youtube video link, works with normal video and youtu.be variants.</p>
+        <p>To add this video to the website, add this shortcode "[custom_youtube_embed]" anywhere you want. Be sure to copy correctly the youtube video link, works with normal video and youtu.be variants.</p>
         <form method="post" action="options.php">
             <?php
             settings_fields('custom_youtube_embed_frontend_group');
