@@ -7,9 +7,15 @@ function custom_youtube_embed_frontend_shortcode() {
 
     return 
     '
-    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio" style="margin-top:0;margin-bottom:0"><div class="wp-block-embed__wrapper">
-    <iframe title="Youtube Video Player" style="width: 100%; height: 100%; aspect-ratio: 16 / 9; margin: 0 auto;" src="' . esc_url($url) . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+    <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio custom-ytb" style="margin-top:0;margin-bottom:0"><div class="wp-block-embed__wrapper">
+    <iframe title="Youtube Video Player" class="custom-ytb" src="' . esc_url($url) . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
     </div></figure>
+    <style>
+    *.custom-ytb
+    {
+        width: 100%; height: 100%; aspect-ratio: 16 / 9; margin: 0 auto;
+    }
+    </style>
     ';
 }
 add_shortcode('custom_youtube_embed', 'custom_youtube_embed_frontend_shortcode');

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom YouTube Embed Frontend
  * Description: Allows users to embed a YouTube video and manage the link from the backend.
- * Version: 1.1
+ * Version: 1.1.2
  * Author: Axel Dumas
  */
 

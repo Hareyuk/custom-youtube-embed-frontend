@@ -21,5 +21,15 @@ function process_youtube_url($url) {
         $textToRemove = substr($url, $pos);
         $url = str_replace($textToRemove, '', $url);
     }
+    if (str_contains($url, '&amp;')) {
+        $pos = strpos($url, '&amp;');
+        $textToRemove = substr($url, $pos);
+        $url = str_replace($textToRemove, '', $url);
+    }
+    if (str_contains($url, '&feature')) {
+        $pos = strpos($url, '&feature');
+        $textToRemove = substr($url, $pos);
+        $url = str_replace($textToRemove, '', $url);
+    }
     return $url;
 }
